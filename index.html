@@ -13,6 +13,24 @@ h2{margin-top:28px}
 ul{padding-left:22px}
 footer{margin-top:36px;color:#6b7280;font-size:14px}
 a{color:#2563eb;text-decoration:none}
+.star-page{--ink:#24324a;--muted:#667085;--primary:#6750a4;--primary-soft:#f1edff;max-width:860px;margin:0 auto;color:var(--ink)}
+.star-page *{box-sizing:border-box}
+.star-hero{position:relative;overflow:hidden;padding:44px 40px;border-radius:28px;background:linear-gradient(135deg,#6750a4 0%,#7b6ac7 55%,#f29e6d 135%);color:#fff;box-shadow:0 18px 50px rgba(68,50,122,.18)}
+.star-hero:after{content:"✦";position:absolute;right:30px;top:16px;font-size:92px;color:rgba(255,255,255,.14);transform:rotate(12deg)}
+.star-eyebrow{margin:0 0 8px;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+.star-hero h1{position:relative;margin:0 0 8px;font-size:36px;line-height:1.25}
+.star-hero .star-date{position:relative;margin:0;color:rgba(255,255,255,.82)}
+.star-policy{margin-top:22px;padding:38px 40px;border:1px solid #ebe8f3;border-radius:24px;background:#fff;box-shadow:0 12px 36px rgba(36,50,74,.07)}
+.star-policy h2{margin:34px 0 10px;font-size:21px;color:#493a78}
+.star-policy h2:first-of-type{margin-top:28px}
+.star-policy p,.star-policy li{color:#46536a}
+.star-policy ul{padding-left:22px}
+.star-policy li{margin:7px 0}
+.star-note{padding:16px 18px;border-radius:14px;background:var(--primary-soft);border-left:4px solid var(--primary)}
+.star-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:24px;border-top:1px solid #ececf2}
+.star-links a{padding:9px 13px;border-radius:999px;background:#f5f3fb;color:#59458f;font-weight:600}
+.star-footer{text-align:center;margin:24px 0 6px;color:var(--muted);font-size:14px}
+@media(max-width:600px){body{margin:20px auto;padding:0 14px}.star-hero{padding:34px 24px}.star-hero h1{font-size:30px}.star-policy{padding:28px 22px}.star-hero:after{right:10px;font-size:72px}}
 </style>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
@@ -23,6 +41,9 @@ const app = document.getElementById('app');
 
 if (template && app) {
 app.replaceChildren(template.content.cloneNode(true));
+if (template.dataset.pageTitle) {
+document.title = template.dataset.pageTitle;
+}
 }
 });
 </script>
@@ -213,6 +234,80 @@ If you have any questions regarding this Privacy Policy, please contact us:
 
 </body>
 </html>
+</template>
+<template id="model-3" data-page-title="Privacy Policy - Star Pet Task Island">
+<main class="star-page">
+  <header class="star-hero">
+    <p class="star-eyebrow">Star Pet Task Island</p>
+    <h1>Privacy Policy</h1>
+    <p class="star-date">Effective and last updated: July 20, 2026</p>
+  </header>
+
+  <article class="star-policy">
+    <p>Star Pet Task Island (the “App”) is a family task and growth-motivation app designed for parents and children to use together. We respect the privacy of every family member, especially children. This policy explains what information the App processes, why it is processed, how it is stored, and how you can manage or delete it.</p>
+
+    <p class="star-note"><strong>At a glance:</strong> The App does not require a developer account, display third-party ads, track users across apps, or include third-party advertising or behavioral analytics SDKs. App data is primarily stored on your device and, when iCloud is available, synced using Apple CloudKit.</p>
+
+    <h2>1. Information We Process</h2>
+    <p>To provide task management, rewards, and growth records, the App processes information that a parent or device user chooses to enter or creates through use of the App:</p>
+    <ul>
+      <li><strong>Family and child profile data:</strong> family name, child nickname, selected avatar, and related identifiers.</li>
+      <li><strong>Task and progress data:</strong> task content, completion history, star balance, reward history, gift redemptions, pets, equipment, battles, and home progress.</li>
+      <li><strong>Gift images:</strong> only when a parent takes or selects an image to use as a gift cover.</li>
+      <li><strong>App settings:</strong> sync status, interface preferences, and local configuration needed for the App to work.</li>
+      <li><strong>Parent PIN:</strong> used to protect parent features. Only a salted hash used for verification is stored locally on the device. The readable PIN is not stored and the PIN is not synced to iCloud.</li>
+    </ul>
+    <p>We do not require real names, email addresses, phone numbers, precise location, contacts, or payment information.</p>
+
+    <h2>2. Camera and Photo Access</h2>
+    <p>The App accesses the camera or system photo picker only after a parent chooses to add an image to a gift. The selected image is used only for the gift content you create. You can change camera or photo permissions at any time in iOS Settings. Denying access does not affect features that do not require an image.</p>
+
+    <h2>3. Local Storage and iCloud Sync</h2>
+    <p>App data is first stored locally on the device. By default, when the device is signed in to and has iCloud available, the App uses Apple CloudKit to upload family profiles, task records, progress data, and gift images to your private iCloud database so the information can sync across devices signed in to the same Apple Account. If iCloud is unavailable, the App falls back to local-only storage on the current device.</p>
+    <p>iCloud is provided by Apple, and Apple’s handling of information is governed by its privacy policy and service terms. Apart from processing by Apple to provide iCloud, we do not sell, rent, or disclose this data to advertisers, data brokers, or other third parties.</p>
+
+    <h2>4. How Information Is Used</h2>
+    <p>The information described above is used only to:</p>
+    <ul>
+      <li>create and manage family tasks, rewards, gifts, and progress;</li>
+      <li>show child-specific content on the device and protect parent actions with a parent PIN;</li>
+      <li>sync and restore App data when iCloud is available; and</li>
+      <li>respond to technical support requests that you choose to send.</li>
+    </ul>
+
+    <h2>5. Advertising, Analytics, and Tracking</h2>
+    <p>The App does not display third-party advertising, use third-party advertising, marketing, profiling, or cross-app tracking tools, or sell personal information. The current version does not include third-party crash reporting or behavioral analytics SDKs.</p>
+
+    <h2>6. Children’s Privacy</h2>
+    <p>The App may be used by children under parental supervision. Child profiles and activity records should be created and managed by a parent or guardian. We do not require children to register an account, serve ads based on children’s data, or ask children for contact information. A parent or guardian can delete related data as described in Section 7.</p>
+
+    <h2>7. Retention, Deletion, and Permission Choices</h2>
+    <p>Data remains on the device and in your iCloud until you delete content in the App, remove the App and its local data, or delete the App’s data from iCloud. Because the App has no developer-operated account system, we cannot remotely identify or directly delete content in your private iCloud database.</p>
+    <ul>
+      <li>You can edit or delete tasks, rewards, gifts, and other content in the App.</li>
+      <li>You can revoke camera or photo access in iOS Settings.</li>
+      <li>You can manage or delete the App’s iCloud data through your Apple Account’s iCloud storage settings.</li>
+      <li>To remove all local data from the current device, delete the App. Before reinstalling, also check whether App data remains in iCloud.</li>
+    </ul>
+
+    <h2>8. Data Security</h2>
+    <p>We use storage protections provided by the operating system, hashed parent PIN verification, and Apple CloudKit security features to reduce the risk of unauthorized access. No storage or transmission method is completely secure, so please protect your device, Apple Account, and parent PIN.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this policy when App features, data practices, or applicable requirements change. The updated version will be posted on this page with a new effective date. Where appropriate, material changes may also be explained in the App.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>For questions about this policy, children’s privacy, or data management, contact the developer of Star Pet Task Island:</p>
+    <p><a href="mailto:453554515@qq.com">453554515@qq.com</a></p>
+
+    <nav class="star-links" aria-label="Related pages">
+      <a href="https://zylz10.github.io/privacy_policy/?id=3" lang="zh-CN">中文</a>
+      <a href="https://zylz10.github.io/tech_support/?id=3">Technical Support</a>
+    </nav>
+  </article>
+
+  <footer class="star-footer">© 2026 Star Pet Task Island. All rights reserved.</footer>
+</main>
 </template>
 </body>
 </html>
