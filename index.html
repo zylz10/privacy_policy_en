@@ -30,12 +30,34 @@ a{color:#2563eb;text-decoration:none}
 .star-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:24px;border-top:1px solid #ececf2}
 .star-links a{padding:9px 13px;border-radius:999px;background:#f5f3fb;color:#59458f;font-weight:600}
 .star-footer{text-align:center;margin:24px 0 6px;color:var(--muted);font-size:14px}
+.buddy-page{--buddy-ink:#173553;--buddy-muted:#607487;--buddy-primary:#087f8c;--buddy-soft:#eafafa;max-width:860px;margin:0 auto;color:var(--buddy-ink)}
+.buddy-page *{box-sizing:border-box}
+.buddy-hero{position:relative;overflow:hidden;padding:44px 40px;border-radius:28px;background:linear-gradient(135deg,#087f8c 0%,#14b8a6 58%,#67e8f9 120%);color:#fff;box-shadow:0 18px 50px rgba(8,127,140,.2)}
+.buddy-hero:after{content:"✚";position:absolute;right:30px;top:10px;font-size:102px;font-weight:700;color:rgba(255,255,255,.14)}
+.buddy-eyebrow{position:relative;margin:0 0 8px;font-size:14px;font-weight:750;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.buddy-hero h1{position:relative;margin:0 0 8px;font-size:36px;line-height:1.25}
+.buddy-hero .buddy-date{position:relative;margin:0;color:rgba(255,255,255,.84)}
+.buddy-policy{margin-top:22px;padding:38px 40px;border:1px solid #dceff0;border-radius:24px;background:#fff;box-shadow:0 12px 36px rgba(23,53,83,.07)}
+.buddy-policy h2{margin:34px 0 10px;font-size:21px;color:#086b76}
+.buddy-policy h2:first-of-type{margin-top:28px}
+.buddy-policy p,.buddy-policy li{color:#435d70}
+.buddy-policy li{margin:7px 0}
+.buddy-note{padding:16px 18px;border-radius:14px;background:var(--buddy-soft);border-left:4px solid var(--buddy-primary)}
+.buddy-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:24px;border-top:1px solid #e3eeee}
+.buddy-links a{padding:9px 13px;border-radius:999px;background:#eafafa;color:#086b76;font-weight:650}
+.buddy-footer{text-align:center;margin:24px 0 6px;color:var(--buddy-muted);font-size:14px}
 @media(max-width:600px){body{margin:20px auto;padding:0 14px}.star-hero{padding:34px 24px}.star-hero h1{font-size:30px}.star-policy{padding:28px 22px}.star-hero:after{right:10px;font-size:72px}}
+@media(max-width:600px){.buddy-hero{padding:34px 24px}.buddy-hero h1{font-size:30px}.buddy-policy{padding:28px 22px}.buddy-hero:after{right:10px;font-size:74px}}
 </style>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
 const params = new URLSearchParams(window.location.search);
-const id = params.get('id') || '1';
+const requestedId = params.get('id');
+if (requestedId === '4') {
+window.location.replace(new URL('./allergy-buddy/', window.location.href).href);
+return;
+}
+const id = requestedId || '1';
 const template = document.getElementById(`model-${id}`) || document.getElementById('model-1');
 const app = document.getElementById('app');
 
@@ -321,5 +343,6 @@ If you have any questions regarding this Privacy Policy, please contact us:
   <footer class="star-footer">© 2026 Star Pet Task Island. All rights reserved.</footer>
 </main>
 </template>
+
 </body>
 </html>
